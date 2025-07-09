@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
       title: 'Scam wise',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 0, 16, 108),
+          seedColor: const Color.fromARGB(255, 11, 20, 71),
         ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'ScamWise'),
     );
   }
 }
