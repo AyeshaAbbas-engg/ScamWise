@@ -1,71 +1,33 @@
 import 'package:flutter/material.dart';
-import 'Screen/Tip_Screen.dart';
-import 'Screen/sidebar.dart';
+
+import 'Screen/Home_Page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ScamWise());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class ScamWise extends StatefulWidget {
+  const ScamWise({super.key});
+
+  @override
+  State<ScamWise> createState() => _ScamWiseState();
+}
+
+class _ScamWiseState extends State<ScamWise> {
+  bool isDarkmode = false;
+
+  void toggletheme(bool value) {
+    setState(() {
+      isDarkmode = value;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: isDarkmode ? ThemeData.dark() : ThemeData.light(),
       debugShowCheckedModeBanner: false,
-      title: 'Scam wise',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 11, 20, 71),
-        ),
-      ),
-      home: const MyHomePage(title: 'ScamWise'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-        leading: Builder(
-          builder: (context) => IconButton(
-            icon: const Icon(Icons.menu),
-            onPressed: () => Scaffold.of(context).openDrawer(),
-          ),
-        ),
-      ),
-
-      drawer: const SideBar(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text("Main Content"),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const TipScreen()),
-                );
-              },
-              child: const Text("Tips"),
-            ),
-          ],
-        ),
-      ),
+      home: Home_Page(isDarkMode: isDarkmode, toggletheme: toggletheme),
     );
   }
 }
