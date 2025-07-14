@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'Screen/Scam_Report.dart';
 import 'Screen/Home_Page.dart';
 
 void main() {
@@ -28,6 +28,7 @@ class _ScamWiseState extends State<ScamWise> {
       theme: isDarkmode ? ThemeData.dark() : ThemeData.light(),
       debugShowCheckedModeBanner: false,
       home: Home_Page(isDarkMode: isDarkmode, toggletheme: toggletheme),
+      routes: {'/report': (context) => const ReportScamPage()},
     );
   }
 }

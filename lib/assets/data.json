@@ -1,0 +1,46 @@
+[
+    {
+        "section" : "Today",
+        "alerts":
+        [
+            {
+                "region_en":"Lahore",
+                "region_ur": "لاہور",
+                "scam_en":"Hijecking of WhatsApp",
+                "scam_ur":"واٹس ایپ کا ہائی جیکنگ",
+                "awareness_en":"If someone texts you and said I am in trouble send me this amount of money, donot fall for it, Call them and verify cuz this is the latest scam driven by hackers to put you in depth ok darling never ever do this type of bongee",
+                "awareness_ur":"اگر کوئی آپ کو ٹیکسٹ کرے اور کہے کہ میں مصیبت میں ہوں، مجھے یہ رقم بھیج دیں، تو اس کے جال میں مت پھنسیں، ان سے کال کریں اور تصدیق کریں کیونکہ یہ ہیکرز کی جانب سے چلائی جانے والی تازہ ترین دھوکہ دہی ہے جو آپ کو مشکل میں ڈال سکتی ہے، ٹھیک ہے پیارے، کبھی بھی اس قسم کی بے وقوفی نہ کریں۔"
+            },
+            {
+                "region_en":"Karachi",
+                "region_ur":"کراچی",
+                "scam_en":"OTP requests",
+                "scam_ur":"او ٹی پی کی درخواستیں",
+                "awareness_en":"If Someone says we have sent an OTP to your phone to verify do not fall for it",
+                "awareness_ur":"اگر کوئی کہتا ہے کہ ہم نے آپ کے فون پر توثیق کے لیے ایک OTP بھیجا ہے تو اس کے جال میں مت آئیں۔"
+            }
+        ]
+    },
+    {
+        "section":"Yesterday",
+        "alerts":[
+            {
+                "region_en":"Multan",
+                "region_ur":"ملتان",
+                "scam_en":"Fake Delivery",
+                "scam_ur":"جعلی ترسیل",
+                "awareness_en":"Verify Identity of agents before paying cash",
+                "awareness_ur":"ایجنٹوں کی شناخت کی تصدیق کریں قبل اس کے کہ نقدی ادا کی جائے"
+            },
+            {
+                "region_en":"Karachi",
+                "region_ur":"کراچی",
+                "scam_en":"OTP requests",
+                "scam_ur":"او ٹی پی کی درخواستیں",
+                "awareness_en":"If Someone says we have sent an OTP to your phone to verify do not fall for it",
+                "awareness_ur":"اگر کوئی کہتا ہے کہ ہم نے آپ کے فون پر توثیق کے لیے ایک OTP بھیجا ہے تو اس کے جال میں مت آئیں۔"
+
+            }
+        ]
+    }
+]
