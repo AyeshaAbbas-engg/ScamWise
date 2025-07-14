@@ -178,7 +178,7 @@ class _Home_PageState extends State<Home_Page> {
                             aware: isUrdu ? scam.awareUr : scam.awareEn,
                           ),
                         );
-                      }).toList(),
+                      }),
 
                       const SizedBox(height: 20),
                     ],

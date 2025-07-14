@@ -78,7 +78,7 @@ class _ScamAlertCardState extends State<Scamalertcard> {
                 children: [
                   Expanded(
                     child: Text(
-                      "${widget.aware}",
+                      widget.aware,
                       maxLines: isExpanded ? null : 1,
                       overflow: isExpanded
                           ? TextOverflow.visible
