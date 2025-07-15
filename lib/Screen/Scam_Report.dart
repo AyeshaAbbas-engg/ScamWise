@@ -62,7 +62,7 @@ class _ReportScamPageState extends State<ReportScamPage> {
           children: [
             Container(
               width: double.infinity,
-              height: 140,
+              height: 200,
               decoration: BoxDecoration(
                 color: Colors.blue.shade50,
                 border: Border.all(
@@ -127,7 +127,7 @@ class _ReportScamPageState extends State<ReportScamPage> {
                   .toList(),
               decoration: InputDecoration(
                 filled: true,
-                fillColor: Colors.grey[100],
+                fillColor: Colors.teal,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
                 ),
@@ -145,7 +145,10 @@ class _ReportScamPageState extends State<ReportScamPage> {
                   backgroundColor: Colors.red[800],
                   padding: const EdgeInsets.symmetric(vertical: 16),
                 ),
-                child: const Text("Report", style: TextStyle(fontSize: 16)),
+                child: const Text(
+                  "Report",
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                ),
               ),
             ),
           ],

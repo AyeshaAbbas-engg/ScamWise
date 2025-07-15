@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:scam_wise_/assets/scam_alert_model.dart';
 import 'package:scam_wise_/widgets/ScamAlertCard.dart';
-import 'Scam_Report.dart';
 
 class Home_Page extends StatefulWidget {
   final bool isDarkMode;
