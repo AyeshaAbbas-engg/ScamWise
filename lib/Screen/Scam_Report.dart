@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
+import 'package:scam_wise_/mongo_connection/mongo_DB_report.dart';
 
 class ReportScamPage extends StatefulWidget {
   const ReportScamPage({super.key});
@@ -31,14 +32,31 @@ class _ReportScamPageState extends State<ReportScamPage> {
     }
   }
 
-  void _submitReport() {
+  void _submitReport() async {
     if (_pickedFile != null && _selectedCategory != null) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text("Scam reported successfully!"),
-          backgroundColor: Colors.green,
-        ),
-      );
+      //prepare to send data
+      final report = {
+        "catergory": _selectedCategory,
+        "filename": _pickedFile,
+        "timestamp": DateTime.now().toIso8601String(),
+      };
+      try {
+        await MongoDbReport.insertReport(report);
+
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text("Scam reported Succesfully"),
+            backgroundColor: Colors.green,
+          ),
+        );
+      } catch (e) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text("Failed to report scam : $e"),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
