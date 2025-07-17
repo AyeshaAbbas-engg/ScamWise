@@ -36,7 +36,7 @@ class _ReportScamPageState extends State<ReportScamPage> {
     if (_pickedFile != null && _selectedCategory != null) {
       //prepare to send data
       final report = {
-        "catergory": _selectedCategory,
+        "category": _selectedCategory,
         "filename": _pickedFile,
         "timestamp": DateTime.now().toIso8601String(),
       };

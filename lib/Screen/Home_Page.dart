@@ -59,7 +59,7 @@ class _Home_PageState extends State<Home_Page> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Text('ScamWise', style: TextStyle(color: textColor)),
+        title: Text('ScamWise', style: TextStyle(color: Colors.white)),
         actions: [
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
